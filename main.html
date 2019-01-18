@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Jeep</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<style>
+		#fullpage{width: 100%;height: 100%;}
+		.pages{width: 100%;height: 100%;background-repeat: no-repeat;background-position: center top;background-size: cover;}
+		#page1{background: url(images/main/visual/jeep-main-img-3.jpg) 0 0 no-repeat;}
+		#page2{background: url(images/main/visual/jeep-main-img-2.jpg) 0 0 no-repeat;}
+		#page3{background: url(images/main/visual/jeep-main-img-1.jpg) 0 0 no-repeat;}
+		.slide:nth-child(1){background: url(images/main/visual/jeep-main-img-11.jpg) 0 0 no-repeat;}
+		.slide:nth-child(2){background: url(images/main/visual/jeep-main-img-12.jpg) 0 0 no-repeat;}
+		.slide:nth-child(3){background: url(images/main/visual/jeep-main-img-13.jpg) 0 0 no-repeat;}
+		.slide:nth-child(4){background: url(images/main/visual/jeep-main-img-14.jpg) 0 0 no-repeat;}
+		.slide:nth-child(5){background: url(images/main/visual/jeep-main-img-15.jpg) 0 0 no-repeat;}
+		#nav{position: absolute;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('#fullpage').fullpage();
+		});
+
+	</script>
+</head>
+<body>
+	<nav id="nav">
+		<ul id="menu">
+			<li data-anchor="1st"><a href="#1st">jeep1</a></li>
+			<li data-anchor="2st"><a href="#2st">jeep2</a></li>
+			<li data-anchor="3st"><a href="#3st">jeep3</a></li>
+			<li data-anchor="4st"><a href="#4st">jeep4</a></li>
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section pages" id="page1" data-anchor="1st">
+			<div class="main-cmt">페이지 설명 넣거나 말거나 </div>
+		</div>
+		<div class="section pages" id="page2" data-anchor="2st">
+			<div class="main-cmt">페이지 설명 넣거나 말거나 </div>
+		</div>
+		<div class="section pages" id="page3" data-anchor="3st">
+			<div class="main-cmt">페이지 설명 넣거나 말거나 </div>
+		</div>
+		<div class="section pages" id="page4" data-anchor="4st">
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+		</div>
+	</div>
+</body>
+</html>
