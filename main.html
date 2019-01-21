@@ -3,66 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Jeep</title>
-	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/fullpage.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
-	<style>
-		#fullpage{width: 100%;height: 100%;}
-		#nav{width: 100%;position: absolute;z-index: 1;}
-		#nav ul{float: right;margin-right: 30px;}
-		#nav ul:after{content: '';display: block;clear: both;}
-		#nav ul li{float: left;}
-		#nav ul li a{display: block;width: 100%;text-align: center;line-height: 50px;padding: 0 10px;}
-		.pages{width: 100%;height: 100%;background-repeat: no-repeat;background-position: center top;background-size: cover;}
-			.interval{width: 100%;height: 100%;}
-			.interval ul{width: 100%;height: 100%;}
-			.interval ul li{width: 100%;height: 100%;}
-			.interval ul li.interval1{background: url(images/main/visual/jeep-main-img-1-1.jpg) center no-repeat;display: none;}
-			.interval ul li.interval2{background: url(images/main/visual/jeep-main-img-1-2.jpg) top no-repeat;display: none;}
-			.interval ul li.interval3{background: url(images/main/visual/jeep-main-img-1-3.jpg) center no-repeat;display: none;}
-			.interval ul li.interval4{background: url(images/main/visual/jeep-main-img-1-4.jpg) center no-repeat;display: none;}
-		#page2{background: url(images/main/visual/jeep-main-img-2.jpg) center no-repeat;}
-		#page3{background: url(images/main/visual/jeep-main-img-3.jpg) center no-repeat;}
-		.slide:nth-child(1){background: url(images/main/visual/jeep-main-img-11.jpg) center no-repeat;}
-		.slide:nth-child(2){background: url(images/main/visual/jeep-main-img-12.jpg) center no-repeat;}
-		.slide:nth-child(3){background: url(images/main/visual/jeep-main-img-13.jpg) center no-repeat;}
-		.slide:nth-child(4){background: url(images/main/visual/jeep-main-img-14.jpg) center no-repeat;}
-		.slide:nth-child(5){background: url(images/main/visual/jeep-main-img-15.jpg) center no-repeat;}
-	</style>
-	<script>
-		$(document).ready(function(){
-			var $current=0;
-
-			$('#fullpage').fullpage({
-			anchor:["1st","2st","3st","4st"],
-			menu:"#menu",
-			'afterLoad':function(anchorsLink,index){
-				}
-			});
-			$('.interval ul li').eq(0).fadeIn(0).delay(7800).fadeOut(200);
-			timer();
-			function timer(){
-				setInterval(function(){
-					if ($current<=2) {
-						$current++;
-					} else {
-						$current=0;
-					}
-					$('.interval ul li').eq($current).fadeIn(200).delay(7600).fadeOut(200);
-				},8000)
-			};
-		});
-
-	</script>
+	<script src="js/main.js"></script>
+	
 </head>
 <body>
+	<h1><a href="main.html">jeep</a></h1>
 	<nav id="nav">
 		<ul id="menu">
-			<li data-anchor="1st"><a href="#1st">jeep1</a></li>
-			<li data-anchor="2st"><a href="#2st">jeep2</a></li>
-			<li data-anchor="3st"><a href="#3st">jeep3</a></li>
-			<li data-anchor="4st"><a href="#4st">jeep4</a></li>
+			<li data-menuanchor="1st"><a href="#1st">jeep1</a></li>
+			<li data-menuanchor="2st"><a href="#2st">jeep2</a></li>
+			<li data-menuanchor="3st"><a href="#3st">jeep3</a></li>
+			<li data-menuanchor="4st"><a href="#4st">jeep4</a></li>
 		</ul>
 	</nav>
 	<div id="fullpage">
