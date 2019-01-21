@@ -1,10 +1,17 @@
 @charset "utf-8";
 @import url(reset.css);
-h1{position: absolute;top: 10px;left: 10px;z-index: 2;}
+h1{position: absolute;top: 30px;left: 40px;z-index: 2;}
 h1>a{display: block;text-indent: -999999px;background: url(../images/main/common/jeep-logo.png) 0 0 no-repeat;width: 87px;height: 35px;background-size: 100%;}
 #nav{width: 100%;position: absolute;z-index: 1;}
-#nav ul{float: right;margin-right: 30px;width: 330px;}
+#nav ul{float: right;margin-right: 90px;width: 330px;}
 #nav ul:after{content: '';display: block;clear: both;}
-#nav ul li{float: left;color: #fff;width: 25%;transition: .4s;font-size: 1.1em;}
+#nav ul li{float: left;color: #fff;width: 25%;transition: .4s;font-size: 1.1em;text-shadow: 1px 1px 1px #292929;}
 #nav ul li.active a{color: #fff;font-weight: bold;font-size: 1.2em;}
-#nav ul li a{display: block;width: 100%;text-align: center;line-height: 55px;padding: 0 10px;}
+#nav ul li a{display: block;width: 100%;text-align: center;line-height: 73px;padding: 0 10px;}
+
+.sidemenu{display: block;	text-indent: -99999px;background: url(../images/main/common/menu.png) 0 0 no-repeat;width: 27px;height: 27px;position: absolute;top: 25px; right: 40px;background-size: 100%;z-index: 4;}
+#side-nav{position: absolute;right: 0;padding-top: 25px;z-index: 3;color: #fff;width: 22%;height: 100%;	background: #000;}
+#side-nav .side-nav-inner-wrap{position: absolute;top: 80px;line-height: 45px;width: 100%;}
+#side-nav h2{padding-left: 50px;}
+#side-nav ul li{padding-left: 70px;}
+#side-nav ul li:hover{background-color: #fff;color: #000;font-weight: bold;	}
