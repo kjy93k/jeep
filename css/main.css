@@ -15,3 +15,6 @@
 .slide:nth-child(3){background: url(../images/main/visual/jeep-main-img-13.jpg) center no-repeat;}
 .slide:nth-child(4){background: url(../images/main/visual/jeep-main-img-14.jpg) center no-repeat;}
 .slide:nth-child(5){background: url(../images/main/visual/jeep-main-img-15.jpg) center no-repeat;}
+.fp-controlArrow.fp-prev,.fp-controlArrow.fp-next{border: none;width: 37px !important;height: 64px;}
+.fp-controlArrow.fp-prev{background: url(../images/main/common/prev-next.png) left 0 no-repeat;}
+.fp-controlArrow.fp-next{background: url(../images/main/common/prev-next.png) right 0 no-repeat;}
