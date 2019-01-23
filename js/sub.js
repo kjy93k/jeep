@@ -52,10 +52,20 @@ $(document).ready(function(){
 	// var $color=$('.color>ul>li').index();
 	// var $wheel=$('.wheel>ul>li').index();
 	// var $top=$('.top>ul>li').index();
+	$('.car-select').hide();
+	$('.car-select-1').show();
+	$('.color ul').addClass('on');
 	$('.car-list li').click(function(){
 		$cn=$(this).html();
+		$cnti=$(this).index();
 		$('.car-select').hide()
-		$('.car-select').eq($(this).index()).show();
+		$('.car-select').eq($cnti).show();
+		$('.color ul').removeClass('on');
+		$('.color ul').addClass('on');
+		$cti ='01';
+		$wti ='01';
+		$tti ='01';
+
 		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
 	});
 	$('.car-select h3').click(function(){
