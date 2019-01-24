@@ -45,10 +45,11 @@ $(document).ready(function(){
 			sidenum3=0;
 		}
 	});
-	var $cn ='sahara';
+	var $cn ='laredo';
 	var $cti ='01';
 	var $wti ='01';
 	var $tti ='01';
+	var $rti ='01';
 	// var $color=$('.color>ul>li').index();
 	// var $wheel=$('.wheel>ul>li').index();
 	// var $top=$('.top>ul>li').index();
@@ -67,8 +68,17 @@ $(document).ready(function(){
 		$cti ='01';
 		$wti ='01';
 		$tti ='01';
-
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		//$rti ='01';
+	var i=1;
+	var $rti = setInterval(function(){
+		if(i>=9){
+			i=1;
+		} else {
+			i++;
+		}
+	},200);
+	$rti();	
+		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti()+'.jpg'});
 	});
 	$('.car-select h3').click(function(){
 		$('.car-select>ul>li>ul').removeClass('on');
@@ -82,16 +92,18 @@ $(document).ready(function(){
 			$cti=eval($ti+1);
 		}
 		console.log($cti);
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
+
 	$('.wheel li').click(function(){
+
 	var $ti = $(this).index();
 		if($ti<9) {
 			$wti='0'+eval($ti+1);
 		} else {
 			$wti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
 	$('.top li').click(function(){
 	var $ti = $(this).index();
@@ -100,7 +112,9 @@ $(document).ready(function(){
 		} else {
 			$tti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
+
+
 	$('.car-select ul').addClass('on');
 });
