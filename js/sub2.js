@@ -49,7 +49,7 @@ $(document).ready(function(){
 	var $cti ='01';
 	var $wti ='01';
 	var $tti ='01';
-	var $rti ='01';
+	var $rti ='1';
 	// var $color=$('.color>ul>li').index();
 	// var $wheel=$('.wheel>ul>li').index();
 	// var $top=$('.top>ul>li').index();
@@ -68,16 +68,17 @@ $(document).ready(function(){
 		$cti ='01';
 		$wti ='01';
 		$tti ='01';
-		//$rti ='01';
+		$rti ='1';
 	var i=1;
 	var $rti = setInterval(function(){
+		i++;
 		if(i>=9){
 			i=1;
 		} else {
 			i++;
 		}
-	},200);
-	$rti();	
+		console.log($rti);
+	},200);	
 		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti()+'.jpg'});
 	});
 	$('.car-select h3').click(function(){
@@ -91,7 +92,6 @@ $(document).ready(function(){
 		} else {
 			$cti=eval($ti+1);
 		}
-		console.log($cti);
 		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
 
