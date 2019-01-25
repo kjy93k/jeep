@@ -45,17 +45,19 @@ $(document).ready(function(){
 			sidenum3=0;
 		}
 	});
-	var $cn ='laredo';
+	var $cn=$('.car-1-1').html();
 	var $cti ='01';
 	var $wti ='01';
 	var $tti ='01';
 	var $rti ='1';
-	// var $color=$('.color>ul>li').index();
-	// var $wheel=$('.wheel>ul>li').index();
-	// var $top=$('.top>ul>li').index();
+
+	$('#side-nav li').click(function(){
+		var $folderN = $(this).attr('class');
+		console.log($folderN);
+	});
+
 	$('.car-select').hide();
 	$('.car-select-1').show();
-	//$('.color ul').addClass('on');
 	$('.car-list li').click(function(){
 		$cn=$(this).html();
 		$cnti=$(this).index();
@@ -63,23 +65,10 @@ $(document).ready(function(){
 		$(this).addClass('select');
 		$('.car-select').hide()
 		$('.car-select').eq($cnti).fadeIn().show();
-		//$('.color ul').removeClass('on');
-		//$('.color ul').addClass('on');
 		$cti ='01';
 		$wti ='01';
 		$tti ='01';
-		$rti ='1';
-	var i=1;
-	var $rti = setInterval(function(){
-		i++;
-		if(i>=9){
-			i=1;
-		} else {
-			i++;
-		}
-		console.log($rti);
-	},200);	
-		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti()+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
 	$('.car-select h3').click(function(){
 		$('.car-select>ul>li>ul').removeClass('on');
@@ -92,7 +81,7 @@ $(document).ready(function(){
 		} else {
 			$cti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
 
 	$('.wheel li').click(function(){
@@ -103,7 +92,7 @@ $(document).ready(function(){
 		} else {
 			$wti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
 	$('.top li').click(function(){
 	var $ti = $(this).index();
@@ -112,7 +101,7 @@ $(document).ready(function(){
 		} else {
 			$tti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/grandcherokee/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'r0'+$rti+'.jpg'});
 	});
 
 

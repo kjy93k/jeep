@@ -10,49 +10,152 @@ h1 a{background: url(../images/main/common/jeep-logo-black.png);background-size:
 .car-title h2{font-weight: bold;font-size: 20px;margin-bottom: 10px;}
 .car-title h2+p{font-size: 26px;margin-bottom: 50px;}
 .car-list{margin-bottom: 148px;}
-.car-list ul{width: 100%;padding: 0 43%;}
+.car-list ul{width: 100%;padding: 0 40%;}
 .car-list ul:after{content: '';display: block;clear: both;}
-.car-list ul li{float: left;text-align: center;font-family: 'Oswald', 'Nanum Gothic', sans-serif;font-variant: small-caps;font-size: 24px;position: relative;}
-.car-list ul li:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/anwrangler/saharac01w01t01.jpg) center no-repeat;background-size: contain;top: 50px;left: -85px;}
-.car-list ul li:last-child:before{background: url(../images/sub/anwrangler/sportc01w01t01.jpg) center no-repeat;background-size: contain;}
+.car-list ul li{float: left;text-align: center;font-family: 'Oswald', 'Nanum Gothic', sans-serif;font-variant: small-caps;font-size: 24px;position: relative;width: 30%;}
+.car-list ul li.sahara:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/anwrangler/saharac01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
+.car-list ul li.sport:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/anwrangler/sportc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
+.car-list ul li.laredo:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/grandcherokee/laredoc01w01t01r08.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
+.car-list ul li.upland:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/grandcherokee/uplandc01w01t01r08.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
+.car-list ul li.cherokee:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/cherokee/cherokeec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -40px;}
+.car-list ul li.altitude:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/altitudec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: 18px;}
+.car-list ul li.limited:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/limitedc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: 18px;}
+.car-list ul li.trailhawk:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/trailhawkc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: 18px;}
+.car-list ul li.latitude:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/renegade/latitudec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -42px;}
+.car-list ul li.overland:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/angladiator/overlandc01w01t01r08.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -35px;}
 .car-list ul li:last-child{float: right;}
-.car-shape{width: 100%;height: 400px;background: url(../images/sub/anwrangler/saharac01w01t01.jpg) center no-repeat;margin-bottom: 40px;}
-.car-select > ul{position: relative;width: 100%;}
-.car-select:nth-child(2){display: none;}
-.car-select > ul>li{position: absolute;top: 0;width: 100%;}
-.car-select > ul> li h3{position: absolute; cursor: pointer;left: 40%; transform: translateX(-50%);}
-.car-select > ul>li:nth-child(2) h3{left: 50%;}
-.car-select > ul>li:nth-child(3) h3{left: auto;right: 40%;}
-.car-select >ul>li ul{position: absolute;left: 50%;top: 45px;transform: translateX(-50%);}
-.car-select >ul>li ul li{float: left;width: 54px; height: 56px;border-radius: 56%;margin-right: 20px;}
+.car-list ul li:hover:before{background-size: 120%;}
+.car-list .select{background: url(../images/main/common/text-bg.png) center 8px no-repeat;}
+li.car-1-1 {margin-right: 35px;}
+li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
+.car-shape{width: 57%;float: left;height: 400px;transition: .7s;position: relative;background-position: center;}
+.car-shape:after{content: '';display: block;width: 90%;height: 100%;/*border-right: 1px solid #ccc;*/}
+.car-shape button{width: 178px;height: 75px;border: none;position: absolute;bottom: 10px;left: 13%;background: url(../images/sub/turn-left.png) 0 0 no-repeat;background-size: 50%;}
+.car-shape button.right{left: auto;right: 6%;bottom: 30px;background: url(../images/sub/turn-right.png) 0 0 no-repeat;background-size: 50%;}
+.car-select{float: right;width: 39%;padding-top: 55px;}
+.car-select h3{float: left;width: 80px;line-height: 55px;font-family: 'Oswald', 'Nanum Gothic', sans-serif;cursor: pointer;}
+.car-select ul>li>ul{float: left;width: 370px;}
+.car-select ul>li>ul>li:nth-child(5)~li{margin-top: 10px;}
+.car-select>ul>li{margin-bottom: 25px;}
+.car-select>ul>li:after{content: '';display: block;clear: both;}
+.car-select >ul>li ul li{float: left;width: 54px; height: 54px;border-radius: 56%;margin-right: 20px;cursor: pointer;}
+.car-select >ul>li.color ul li{width: 43px; height: 43px;}
 .car-select >ul>li.top ul li{border: 3px solid #ddd;}
-.car-select-1 >ul>li.color ul li:nth-child(1){background: #3d3d3d;}
-.car-select-1 >ul>li.color ul li:nth-child(2){background: #606060;}
-.car-select-1 >ul>li.color ul li:nth-child(3){background: #151515;}
-.car-select-1 >ul>li.color ul li:nth-child(4){background: #e2bc01;}
-.car-select-1 >ul>li.color ul li:nth-child(5){background: #d3d5d2;}
-.car-select-1 >ul>li.color ul li:nth-child(6){background: #44750a;}
-.car-select-1 >ul>li.color ul li:nth-child(7){background: #c70506;}
-.car-select-1 >ul>li.color ul li:nth-child(8){background: #df592f;}
-.car-select-1 >ul>li.color ul li:nth-child(9){background: #05346f;}
-.car-select-1 >ul>li.color ul li:nth-child(10){background: #717276;}
-.car-select-1 >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/anwrangler/saharaw01.jpg) 0 0 no-repeat;background-size: cover;}
-.car-select-1 >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/anwrangler/saharaw02.jpg) 0 0 no-repeat;background-size: cover;}
-.car-select-1 >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
-.car-select-1 >ul>li.top ul li:nth-child(2){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
-.car-select-1 >ul>li.top ul li:nth-child(3){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
-.car-select-2 >ul>li.color ul li:nth-child(1){background: #b70201;}
-.car-select-2 >ul>li.color ul li:nth-child(2){background: #636363;}
-.car-select-2 >ul>li.color ul li:nth-child(3){background: #151515;}
-.car-select-2 >ul>li.color ul li:nth-child(4){background: #e2bc00;}
-.car-select-2 >ul>li.color ul li:nth-child(5){background: #d0d2cf;}
-.car-select-2 >ul>li.color ul li:nth-child(6){background: #538b0e;}
-.car-select-2 >ul>li.color ul li:nth-child(7){background: #3c3c3c;}
-.car-select-2 >ul>li.color ul li:nth-child(8){background: #cb5a2c;}
-.car-select-2 >ul>li.color ul li:nth-child(9){background: #012c5e;}
-.car-select-2 >ul>li.color ul li:nth-child(10){background: #656669;}
-.car-select-2 >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/anwrangler/sportw01.jpg) 0 0 no-repeat;background-size: cover;}
-.car-select-2 >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
-.car-select-2 >ul>li.top ul li:nth-child(2){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
-.car-select >ul>li>ul{display: none;}
-.car-select >ul>li>ul.on{display: block;}
+.car-select.sahara >ul>li.color ul li:nth-child(1){background: #3d3d3d;}
+.car-select.sahara >ul>li.color ul li:nth-child(2){background: #606060;}
+.car-select.sahara >ul>li.color ul li:nth-child(3){background: #151515;}
+.car-select.sahara >ul>li.color ul li:nth-child(4){background: #e2bc01;}
+.car-select.sahara >ul>li.color ul li:nth-child(5){background: #d3d5d2;}
+.car-select.sahara >ul>li.color ul li:nth-child(6){background: #44750a;}
+.car-select.sahara >ul>li.color ul li:nth-child(7){background: #c70506;}
+.car-select.sahara >ul>li.color ul li:nth-child(8){background: #df592f;}
+.car-select.sahara >ul>li.color ul li:nth-child(9){background: #05346f;}
+.car-select.sahara >ul>li.color ul li:nth-child(10){background: #717276;}
+.car-select.sahara >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sahara >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sahara >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sahara >ul>li.top ul li:nth-child(2){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sahara >ul>li.top ul li:nth-child(3){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sport >ul>li.color ul li:nth-child(1){background: #b70201;}
+.car-select.sport >ul>li.color ul li:nth-child(2){background: #636363;}
+.car-select.sport >ul>li.color ul li:nth-child(3){background: #151515;}
+.car-select.sport >ul>li.color ul li:nth-child(4){background: #e2bc00;}
+.car-select.sport >ul>li.color ul li:nth-child(5){background: #d0d2cf;}
+.car-select.sport >ul>li.color ul li:nth-child(6){background: #538b0e;}
+.car-select.sport >ul>li.color ul li:nth-child(7){background: #3c3c3c;}
+.car-select.sport >ul>li.color ul li:nth-child(8){background: #cb5a2c;}
+.car-select.sport >ul>li.color ul li:nth-child(9){background: #012c5e;}
+.car-select.sport >ul>li.color ul li:nth-child(10){background: #656669;}
+.car-select.sport >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sport >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sport >ul>li.top ul li:nth-child(2){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.laredo >ul>li.color ul li:nth-child(1){background: #020202;}
+.car-select.laredo >ul>li.color ul li:nth-child(2){background: #eeeeee;}
+.car-select.laredo >ul>li.color ul li:nth-child(3){background: #515151;}
+.car-select.laredo >ul>li.color ul li:nth-child(4){background: #722127;}
+.car-select.laredo >ul>li.color ul li:nth-child(5){background: #3a332b;}
+.car-select.laredo >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.laredo >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.upland >ul>li.color ul li:nth-child(1){background: #656565;}
+.car-select.upland >ul>li.color ul li:nth-child(2){background: #e3e5e2;}
+.car-select.upland >ul>li.color ul li:nth-child(3){background: #202020;}
+.car-select.upland >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.upland >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.cherokee >ul>li.color ul li:nth-child(1){background: #ce3337;}
+.car-select.cherokee >ul>li.color ul li:nth-child(2){background: #575839;}
+.car-select.cherokee >ul>li.color ul li:nth-child(3){background: #4b4b4b;}
+.car-select.cherokee >ul>li.color ul li:nth-child(4){background: #7b7c7e;}
+.car-select.cherokee >ul>li.color ul li:nth-child(5){background: #323232;}
+.car-select.cherokee >ul>li.color ul li:nth-child(6){background: #ebedea;}
+.car-select.cherokee >ul>li.color ul li:nth-child(7){background: #643a3c;}
+.car-select.cherokee >ul>li.color ul li:nth-child(8){background: #7a7265;}
+.car-select.cherokee >ul>li.color ul li:nth-child(9){background: #f5f5f5;}
+.car-select.cherokee >ul>li.color ul li:nth-child(10){background: #3698dc;}
+.car-select.cherokee >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.cherokee >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.cherokee >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.altitude >ul>li.color ul li:nth-child(1){background: #010101;}
+.car-select.altitude >ul>li.color ul li:nth-child(2){background: #d8d7d3;}
+.car-select.altitude >ul>li.color ul li:nth-child(3){background: #850000;}
+.car-select.altitude >ul>li.color ul li:nth-child(4){background: #003b8c;}
+.car-select.altitude >ul>li.color ul li:nth-child(5){background: #7c7d7f;}
+.car-select.altitude >ul>li.color ul li:nth-child(6){background: #575757;}
+.car-select.altitude >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.altitude >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.limited >ul>li.color ul li:nth-child(1){background: #deddd9;}
+.car-select.limited >ul>li.color ul li:nth-child(2){background: #910201;}
+.car-select.limited >ul>li.color ul li:nth-child(3){background: #3b3c2e;}
+.car-select.limited >ul>li.color ul li:nth-child(4){background: #121c5a;}
+.car-select.limited >ul>li.color ul li:nth-child(5){background: #31393b;}
+.car-select.limited >ul>li.color ul li:nth-child(6){background: #0c398a;}
+.car-select.limited >ul>li.color ul li:nth-child(7){background: #78797b;}
+.car-select.limited >ul>li.color ul li:nth-child(8){background: #3c3c3c;}
+.car-select.limited >ul>li.color ul li:nth-child(9){background: #eae9e4;}
+.car-select.limited >ul>li.color ul li:nth-child(10){background: #040404;}
+.car-select.limited >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.limited >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.limited >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(1){background: #13195d;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(2){background: #d3d2cd;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(3){background: #850000;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(4){background: #dd5e11;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(5){background: #404133;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(6){background: #30383a;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(7){background: #04338e;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(8){background: #7c7d7f;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(9){background: #525252;}
+.car-select.trailhawk >ul>li.color ul li:nth-child(10){background: #010101;}
+.car-select.trailhawk >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.trailhawk >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.trailhawk >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.latitude >ul>li.color ul li:nth-child(1){background: #e3bb24;}
+.car-select.latitude >ul>li.color ul li:nth-child(2){background: #535353;}
+.car-select.latitude >ul>li.color ul li:nth-child(3){background: #2e3839;}
+.car-select.latitude >ul>li.color ul li:nth-child(4){background: #9c0b0e;}
+.car-select.latitude >ul>li.color ul li:nth-child(5){background: #263968;}
+.car-select.latitude >ul>li.color ul li:nth-child(6){background: #91bb3b;}
+.car-select.latitude >ul>li.color ul li:nth-child(7){background: #090909;}
+.car-select.latitude >ul>li.color ul li:nth-child(8){background: #d4d1cc;}
+.car-select.latitude >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w04.png) 0 0 no-repeat;background-size: cover;}
+.car-select.latitude >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w05.png) 0 0 no-repeat;background-size: cover;}
+.car-select.latitude >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.overland >ul>li.color ul li:nth-child(1){background: #8f9094;}
+.car-select.overland >ul>li.color ul li:nth-child(2){background: #848075;}
+.car-select.overland >ul>li.color ul li:nth-child(3){background: #474546;}
+.car-select.overland >ul>li.color ul li:nth-child(4){background: #090909;}
+.car-select.overland >ul>li.color ul li:nth-child(5){background: #db0304;}
+.car-select.overland >ul>li.color ul li:nth-child(6){background: #d0d0d0;}
+.car-select.overland >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.overland >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.overland >ul>li.top ul li:nth-child(2){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
+
+
+
+
+
+
+
+.car-select >ul>li.rotate ul li:nth-child(1){background: url(../images/sub/rotate-left.png) center no-repeat;background-size: 80%;}
+.car-select >ul>li.rotate ul li:nth-child(2){background: url(../images/sub/rotate-right.png) center no-repeat;background-size: 80%;}
+
+

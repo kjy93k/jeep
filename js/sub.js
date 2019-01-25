@@ -2,10 +2,6 @@ $(document).ready(function(){
 	var sidenum=0;
 	var sidenum2=0;
 	var sidenum3=0;
-	// var CN1_1 ='sport';
-	// var CN1_2 ='sahara';
-	// $('.car-1-1').html(CN1_1);
-	// $('.car-1-2').html(CN1_2);
 	$('#side-nav').hide();
 	$('.sidemenu').click(function(e){
 		e.preventDefault();
@@ -45,16 +41,34 @@ $(document).ready(function(){
 			sidenum3=0;
 		}
 	});
-	var $cn ='sahara';
+	var $cn=$('.car-1-1').html();
 	var $cti ='01';
 	var $wti ='01';
 	var $tti ='01';
-	// var $color=$('.color>ul>li').index();
-	// var $wheel=$('.wheel>ul>li').index();
-	// var $top=$('.top>ul>li').index();
+	var $rti =''
+	var $i=8;
+	var $folderN =$('.find-name div').attr('class');
+	function r(){
+		 if($('.rotate').length){
+			$rti = 'r0'+$i;
+		}
+	}
+	r();
+	if ($('.car-list li').length>2) {
+		$('.car-list>ul').css('padding','0 30%');
+	}
+	$('.car').each(function(){
+		$(this).addClass($(this).text());
+	});
+	$('.car-select').each(function(){
+		var $carIndex = $(this).index()-3;
+		console.log($carIndex);
+		$(this).addClass($('.car').eq($carIndex).text());
+	});
+	$('.car-list ul li') .addClass();
+	$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
 	$('.car-select').hide();
 	$('.car-select-1').show();
-	//$('.color ul').addClass('on');
 	$('.car-list li').click(function(){
 		$cn=$(this).html();
 		$cnti=$(this).index();
@@ -62,45 +76,59 @@ $(document).ready(function(){
 		$(this).addClass('select');
 		$('.car-select').hide()
 		$('.car-select').eq($cnti).fadeIn().show();
-		//$('.color ul').removeClass('on');
-		//$('.color ul').addClass('on');
 		$cti ='01';
 		$wti ='01';
 		$tti ='01';
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+	});
 
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
-	});
-	$('.car-select h3').click(function(){
-		$('.car-select>ul>li>ul').removeClass('on');
-		$(this).next().addClass('on');
-	});
 	$('.color li').click(function(){
-	var $ti = $(this).index();
+		var $ti = $(this).index();
 		if($ti<9) {
 			$cti='0'+eval($ti+1);
 		} else {
 			$cti=eval($ti+1);
 		}
-		console.log($cti);
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
 	});
+
 	$('.wheel li').click(function(){
-	var $ti = $(this).index();
+
+		var $ti = $(this).index();
 		if($ti<9) {
 			$wti='0'+eval($ti+1);
 		} else {
 			$wti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
 	});
 	$('.top li').click(function(){
-	var $ti = $(this).index();
+		var $ti = $(this).index();
 		if($ti<9) {
 			$tti='0'+eval($ti+1);
 		} else {
 			$tti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/anwrangler/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
 	});
+
+	$('.left').click(function(){
+		$i--;
+		if ($i<1) {
+			$i=8;
+		}
+		$rti = 'r0'+$i;
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+	});
+	$('.right').click(function(){
+	$i++;
+		if ($i>8) {
+			$i=1;
+		}
+		$rti = 'r0'+$i;
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+
+	});
+
 	$('.car-select ul').addClass('on');
 });
