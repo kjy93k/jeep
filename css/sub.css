@@ -4,12 +4,12 @@
 /*.bg-wrap{height: 533px;width: 100%;overflow: hidden;position: relative;}
 .bg-wrap>.bg{width: 100%;height: 533px;background: url(../images/sub/sub-bg.png) 0 top fixed no-repeat;}
 */
-.wrap{margin-top: 100px;}
+.wrap{margin-top: 95px;}
 h1 a{background: url(../images/main/common/jeep-logo-black.png);background-size: cover;}
 .car-title{text-align: center;}
-.car-title h2{font-weight: bold;font-size: 20px;margin-bottom: 10px;}
-.car-title h2+p{font-size: 26px;margin-bottom: 50px;}
-.car-list{margin-bottom: 148px;}
+.car-title h2{font-weight: bold;font-size: 17px;margin-bottom: 10px;}
+.car-title h2+p{font-size: 30px;margin-bottom: 40px;}
+.car-list{margin-bottom: 120px;}
 .car-list ul{width: 100%;padding: 0 40%;}
 .car-list ul:after{content: '';display: block;clear: both;}
 .car-list ul li{float: left;text-align: center;font-family: 'Oswald', 'Nanum Gothic', sans-serif;font-variant: small-caps;font-size: 24px;position: relative;width: 30%;}
@@ -27,20 +27,22 @@ h1 a{background: url(../images/main/common/jeep-logo-black.png);background-size:
 .car-list ul li:hover:before{background-size: 120%;}
 .car-list .select{background: url(../images/main/common/text-bg.png) center 8px no-repeat;}
 li.car-1-1 {margin-right: 35px;}
-li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
+li.car.cherokee,li.car.latitude,li.car.overland{float: none !important; margin: 0 auto;}
 .car-shape{width: 57%;float: left;height: 400px;transition: .7s;position: relative;background-position: center;}
-.car-shape:after{content: '';display: block;width: 90%;height: 100%;/*border-right: 1px solid #ccc;*/}
+.car-shape:after{content: '';display: block;width: 100%;height: 67%;border-right: 1px solid #ccc; position: absolute;bottom: 93px;left: auto;right: 0;}
 .car-shape button{width: 178px;height: 75px;border: none;position: absolute;bottom: 10px;left: 13%;background: url(../images/sub/turn-left.png) 0 0 no-repeat;background-size: 50%;}
 .car-shape button.right{left: auto;right: 6%;bottom: 30px;background: url(../images/sub/turn-right.png) 0 0 no-repeat;background-size: 50%;}
-.car-select{float: right;width: 39%;padding-top: 55px;}
+.car-select{float: right;width: 39%;padding-top: 30px;}
 .car-select h3{float: left;width: 80px;line-height: 55px;font-family: 'Oswald', 'Nanum Gothic', sans-serif;cursor: pointer;}
 .car-select ul>li>ul{float: left;width: 370px;}
 .car-select ul>li>ul>li:nth-child(5)~li{margin-top: 10px;}
 .car-select>ul>li{margin-bottom: 25px;}
 .car-select>ul>li:after{content: '';display: block;clear: both;}
-.car-select >ul>li ul li{float: left;width: 54px; height: 54px;border-radius: 56%;margin-right: 20px;cursor: pointer;}
-.car-select >ul>li.color ul li{width: 43px; height: 43px;}
-.car-select >ul>li.top ul li{border: 3px solid #ddd;}
+.car-select >ul>li ul li{float: left;width: 54px; height: 54px;border-radius: 56%;margin-right: 19px;cursor: pointer;border: 3px solid #fff;}
+.car-select >ul>li ul li:first-child{margin-left: 0 !important;}
+.car-select >ul>li.color ul li{width: 43px; height: 43px; border: 6px solid #fff;transition: .4s;box-sizing: unset;}
+.car-select >ul>li.color ul li.select{border: 6px double #fff;}
+.car-select >ul>li ul li.select{border: 3px solid #ddd;}
 .car-select.sahara >ul>li.color ul li:nth-child(1){background: #3d3d3d;}
 .car-select.sahara >ul>li.color ul li:nth-child(2){background: #606060;}
 .car-select.sahara >ul>li.color ul li:nth-child(3){background: #151515;}
@@ -51,8 +53,8 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.sahara >ul>li.color ul li:nth-child(8){background: #df592f;}
 .car-select.sahara >ul>li.color ul li:nth-child(9){background: #05346f;}
 .car-select.sahara >ul>li.color ul li:nth-child(10){background: #717276;}
-.car-select.sahara >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
-.car-select.sahara >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sahara >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) center -1px no-repeat;background-size: 108%;}
+.car-select.sahara >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) center -1px no-repeat;background-size: 108%;}
 .car-select.sahara >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
 .car-select.sahara >ul>li.top ul li:nth-child(2){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.sahara >ul>li.top ul li:nth-child(3){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
@@ -66,7 +68,7 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.sport >ul>li.color ul li:nth-child(8){background: #cb5a2c;}
 .car-select.sport >ul>li.color ul li:nth-child(9){background: #012c5e;}
 .car-select.sport >ul>li.color ul li:nth-child(10){background: #656669;}
-.car-select.sport >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.sport >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) center -1px no-repeat;background-size: 108%;}
 .car-select.sport >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
 .car-select.sport >ul>li.top ul li:nth-child(2){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
 .car-select.laredo >ul>li.color ul li:nth-child(1){background: #020202;}
@@ -74,12 +76,12 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.laredo >ul>li.color ul li:nth-child(3){background: #515151;}
 .car-select.laredo >ul>li.color ul li:nth-child(4){background: #722127;}
 .car-select.laredo >ul>li.color ul li:nth-child(5){background: #3a332b;}
-.car-select.laredo >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.laredo >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w02.png) center -1px no-repeat;background-size: 108%;}
 .car-select.laredo >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.upland >ul>li.color ul li:nth-child(1){background: #656565;}
 .car-select.upland >ul>li.color ul li:nth-child(2){background: #e3e5e2;}
 .car-select.upland >ul>li.color ul li:nth-child(3){background: #202020;}
-.car-select.upland >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.upland >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) center -1px no-repeat;background-size: 108%;}
 .car-select.upland >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.cherokee >ul>li.color ul li:nth-child(1){background: #ce3337;}
 .car-select.cherokee >ul>li.color ul li:nth-child(2){background: #575839;}
@@ -91,8 +93,8 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.cherokee >ul>li.color ul li:nth-child(8){background: #7a7265;}
 .car-select.cherokee >ul>li.color ul li:nth-child(9){background: #f5f5f5;}
 .car-select.cherokee >ul>li.color ul li:nth-child(10){background: #3698dc;}
-.car-select.cherokee >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
-.car-select.cherokee >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.cherokee >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) center -1px no-repeat;background-size: 108%;}
+.car-select.cherokee >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w03.png) center -1px no-repeat;background-size: 108%;}
 .car-select.cherokee >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.altitude >ul>li.color ul li:nth-child(1){background: #010101;}
 .car-select.altitude >ul>li.color ul li:nth-child(2){background: #d8d7d3;}
@@ -100,7 +102,7 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.altitude >ul>li.color ul li:nth-child(4){background: #003b8c;}
 .car-select.altitude >ul>li.color ul li:nth-child(5){background: #7c7d7f;}
 .car-select.altitude >ul>li.color ul li:nth-child(6){background: #575757;}
-.car-select.altitude >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) 0 0 no-repeat;background-size: cover;}
+.car-select.altitude >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w03.png) center -1px no-repeat;background-size: 108%;}
 .car-select.altitude >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.limited >ul>li.color ul li:nth-child(1){background: #deddd9;}
 .car-select.limited >ul>li.color ul li:nth-child(2){background: #910201;}
@@ -112,8 +114,8 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.limited >ul>li.color ul li:nth-child(8){background: #3c3c3c;}
 .car-select.limited >ul>li.color ul li:nth-child(9){background: #eae9e4;}
 .car-select.limited >ul>li.color ul li:nth-child(10){background: #040404;}
-.car-select.limited >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
-.car-select.limited >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.limited >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) center -1px no-repeat;background-size: 108%;}
+.car-select.limited >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) center -1px no-repeat;background-size: 108%;}
 .car-select.limited >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
 .car-select.trailhawk >ul>li.color ul li:nth-child(1){background: #13195d;}
 .car-select.trailhawk >ul>li.color ul li:nth-child(2){background: #d3d2cd;}
@@ -125,8 +127,8 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.trailhawk >ul>li.color ul li:nth-child(8){background: #7c7d7f;}
 .car-select.trailhawk >ul>li.color ul li:nth-child(9){background: #525252;}
 .car-select.trailhawk >ul>li.color ul li:nth-child(10){background: #010101;}
-.car-select.trailhawk >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
-.car-select.trailhawk >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) 0 0 no-repeat;background-size: cover;}
+.car-select.trailhawk >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) center -1px no-repeat;background-size: 108%;}
+.car-select.trailhawk >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w02.png) center -1px no-repeat;background-size: 108%;}
 .car-select.trailhawk >ul>li.top ul li:nth-child(1){background: url(../images/sub/t01.png) 0 0 no-repeat;background-size: cover;}
 .car-select.latitude >ul>li.color ul li:nth-child(1){background: #e3bb24;}
 .car-select.latitude >ul>li.color ul li:nth-child(2){background: #535353;}
@@ -136,8 +138,8 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.latitude >ul>li.color ul li:nth-child(6){background: #91bb3b;}
 .car-select.latitude >ul>li.color ul li:nth-child(7){background: #090909;}
 .car-select.latitude >ul>li.color ul li:nth-child(8){background: #d4d1cc;}
-.car-select.latitude >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w04.png) 0 0 no-repeat;background-size: cover;}
-.car-select.latitude >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w05.png) 0 0 no-repeat;background-size: cover;}
+.car-select.latitude >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w04.png) center -1px no-repeat;background-size: 108%;}
+.car-select.latitude >ul>li.wheel ul li:nth-child(2){background: url(../images/sub/w05.png) center -1px no-repeat;background-size: 108%;}
 .car-select.latitude >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.overland >ul>li.color ul li:nth-child(1){background: #8f9094;}
 .car-select.overland >ul>li.color ul li:nth-child(2){background: #848075;}
@@ -145,7 +147,7 @@ li.car.cherokee,li.car.latitude,li.car.overland{margin-right: 155px;}
 .car-select.overland >ul>li.color ul li:nth-child(4){background: #090909;}
 .car-select.overland >ul>li.color ul li:nth-child(5){background: #db0304;}
 .car-select.overland >ul>li.color ul li:nth-child(6){background: #d0d0d0;}
-.car-select.overland >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) 0 0 no-repeat;background-size: cover;}
+.car-select.overland >ul>li.wheel ul li:nth-child(1){background: url(../images/sub/w01.png) center -1px no-repeat;background-size: 108%;}
 .car-select.overland >ul>li.top ul li:nth-child(1){background: url(../images/sub/t02.png) 0 0 no-repeat;background-size: cover;}
 .car-select.overland >ul>li.top ul li:nth-child(2){background: url(../images/sub/t03.png) 0 0 no-repeat;background-size: cover;}
 

@@ -65,7 +65,6 @@ $(document).ready(function(){
 		console.log($carIndex);
 		$(this).addClass($('.car').eq($carIndex).text());
 	});
-	$('.car-list ul li') .addClass();
 	$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
 	$('.car-select').hide();
 	$('.car-select-1').show();
@@ -81,7 +80,10 @@ $(document).ready(function(){
 		$tti ='01';
 		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
 	});
-
+	$('.color li:first-child').addClass('select');
+	$('.wheel li:first-child').addClass('select');
+	$('.top li:first-child').addClass('select');
+	$('.rotate li:first-child').addClass('select');
 	$('.color li').click(function(){
 		var $ti = $(this).index();
 		if($ti<9) {
@@ -90,6 +92,8 @@ $(document).ready(function(){
 			$cti=eval($ti+1);
 		}
 		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.color li').removeClass('select');
+		$(this).addClass('select');
 	});
 
 	$('.wheel li').click(function(){
@@ -101,6 +105,8 @@ $(document).ready(function(){
 			$wti=eval($ti+1);
 		}
 		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.wheel li').removeClass('select');
+		$(this).addClass('select');		
 	});
 	$('.top li').click(function(){
 		var $ti = $(this).index();
@@ -110,6 +116,13 @@ $(document).ready(function(){
 			$tti=eval($ti+1);
 		}
 		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.top li').removeClass('select');
+		$(this).addClass('select');		
+	});
+
+	$('.rotate li').click(function(){
+		$('.rotate li').removeClass('select');
+		$(this).addClass('select');
 	});
 
 	$('.left').click(function(){

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
 	<script src="js/main.js"></script>
@@ -14,13 +15,14 @@
 	
 </head>
 <body>
-	<h1><a href="main.html">jeep</a></h1>
+	<h1><a href="index.html">jeep</a></h1>
 	<nav id="nav">
 		<ul id="menu">
 			<li data-menuanchor="1st"><a href="#1st">jeep1</a></li>
 			<li data-menuanchor="2st"><a href="#2st">jeep2</a></li>
 			<li data-menuanchor="3st"><a href="#3st">jeep3</a></li>
 			<li data-menuanchor="4st"><a href="#4st">jeep4</a></li>
+			<li data-menuanchor="5st"><a href="#5st">jeep5</a></li>
 		</ul>
 	</nav>
 	<a href="#" class="sidemenu">menu</a>
@@ -49,8 +51,14 @@
 			</div>
 		</div>
 	</div>
+	<div class="bg-dim"><p>스크롤을 내려주세요</p></div>
 	<div id="fullpage">
 		<div class="section pages" id="page1" data-anchor="1st">
+			<div class="video-wrap">
+				<video class="main-video" autoplay controls muted loop style="width: 100%;"><source src="images/main/visual/jeep.mp4"></video>
+			</div>
+		</div>
+		<div class="section pages" id="page2" data-anchor="2st">
 			<div class="interval">
 				<ul>
 					<li class="interval1"></li>
@@ -60,13 +68,16 @@
 				</ul>
 			</div>
 		</div>
-		<div class="section pages" id="page2" data-anchor="2st">
-			<div class="main-cmt">페이지 설명 넣거나 말거나 </div>
-		</div>
 		<div class="section pages" id="page3" data-anchor="3st">
-			<div class="main-cmt">페이지 설명 넣거나 말거나 </div>
+			<div class="main-cmt"><img src="images/main/visual/MT_white.png" alt=""> </div>
 		</div>
 		<div class="section pages" id="page4" data-anchor="4st">
+			<div class="main-cmt">
+				<p>NOW MAKE IT YOURS</p>
+				<p><img src="images/main/visual/SSN-Logo.png" alt=""></p>
+			</div>
+		</div>
+		<div class="section pages" id="page5" data-anchor="5st">
 			<div class="slide"></div>
 			<div class="slide"></div>
 			<div class="slide"></div>
