@@ -4,15 +4,25 @@ $(document).ready(function(){
 	var sidenum2=0;
 	var sidenum3=0;
 	
-	$('.bg-dim').fadeIn(1000).delay(5000).fadeOut(1000);
-	$('.bg-dim').click(function(){
-		$('.bg-dim').hide();
-	});
-
 	$('#fullpage').fullpage({
 	anchor:["1st","2st","3st","4st","5st"],
-	menu:"#menu"
+	menu:"#menu",
+	afterLoad:function(anchorsLink,index){
+		var myVideo = document.querySelector('.main-video');
+		if (index==1) {
+			if(myVideo.paused){myVideo.play();}
+		}	
+		if (index!=1){
+			$('.bg-dim').stop(true).fadeOut();			
+		}
+	}
 	});
+	
+	$('.bg-dim').fadeIn(1000).delay(5000).fadeOut(1000);
+	$('.bg-dim').click(function(){
+		$('.bg-dim').stop(true).fadeOut();
+	});
+	
 	$('.interval ul li').eq(0).fadeIn(0).delay(4800).fadeOut(200);
 	timer();
 	function timer(){

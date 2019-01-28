@@ -10,7 +10,7 @@ h1 a{background: url(../images/main/common/jeep-logo-black.png);background-size:
 .car-title h2{font-weight: bold;font-size: 17px;margin-bottom: 10px;}
 .car-title h2+p{font-size: 30px;margin-bottom: 40px;}
 .car-list{margin-bottom: 120px;}
-.car-list ul{width: 100%;padding: 0 40%;}
+.car-list ul{width: 380px;margin: 0 auto;}
 .car-list ul:after{content: '';display: block;clear: both;}
 .car-list ul li{float: left;text-align: center;font-family: 'Oswald', 'Nanum Gothic', sans-serif;font-variant: small-caps;font-size: 24px;position: relative;width: 30%;}
 .car-list ul li.sahara:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/anwrangler/saharac01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
@@ -18,15 +18,15 @@ h1 a{background: url(../images/main/common/jeep-logo-black.png);background-size:
 .car-list ul li.laredo:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/grandcherokee/laredoc01w01t01r08.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
 .car-list ul li.upland:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/grandcherokee/uplandc01w01t01r08.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -48px;}
 .car-list ul li.cherokee:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/cherokee/cherokeec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -40px;}
-.car-list ul li.altitude:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/altitudec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: 18px;}
-.car-list ul li.limited:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/limitedc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: 18px;}
-.car-list ul li.trailhawk:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/trailhawkc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: 18px;}
+.car-list ul li.altitude:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/altitudec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -35px;}
+.car-list ul li.limited:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/limitedc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -35px;}
+.car-list ul li.trailhawk:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/compass/trailhawkc01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right:-35px;}
 .car-list ul li.latitude:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/renegade/latitudec01w01t01.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -42px;}
 .car-list ul li.overland:before{position: absolute;content: '';display: block;width: 190px;height: 79px; background: url(../images/sub/angladiator/overlandc01w01t01r08.png) center no-repeat;transition: .7s;background-size: 100%;top: 50px;right: -35px;}
 .car-list ul li:last-child{float: right;}
 .car-list ul li:hover:before{background-size: 120%;}
 .car-list .select{background: url(../images/main/common/text-bg.png) center 8px no-repeat;}
-li.car-1-1 {margin-right: 35px;}
+li.car-1-1 {margin-right: 20px;}
 li.car.cherokee,li.car.latitude,li.car.overland{float: none !important; margin: 0 auto;}
 .car-shape{width: 57%;float: left;height: 400px;transition: .7s;position: relative;background-position: center;}
 .car-shape:after{content: '';display: block;width: 100%;height: 67%;border-right: 1px solid #ccc; position: absolute;bottom: 93px;left: auto;right: 0;}
@@ -161,3 +161,17 @@ li.car.cherokee,li.car.latitude,li.car.overland{float: none !important; margin: 
 .car-select >ul>li.rotate ul li:nth-child(2){background: url(../images/sub/rotate-right.png) center no-repeat;background-size: 80%;}
 
 
+@media (max-width: 1200px) {
+	.car-shape{float: none; margin: 0 auto;}
+	.car-shape:after{display: none;}
+	.car-select{float: none;margin: 0 auto; width: 64%;}
+	.car-select ul ul{width: 100% !important;}
+	.car-select ul>li>ul>li:nth-child(5)~li{margin-top: 0;}
+	.car-shape{width: 100%;float: left;height: 400px;transition: .7s;position: relative;background-position: center;background-repeat: no-repeat;background-size: contain;}
+}
+@media (max-width: 850px) {
+	.car-shape{background-size: 850px;}
+}
+@media (max-width:550px ) {
+	.car-shape{background-size: 550px;height: 250px;}
+}

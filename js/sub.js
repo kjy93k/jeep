@@ -54,9 +54,11 @@ $(document).ready(function(){
 		}
 	}
 	r();
+	/*
 	if ($('.car-list li').length>2) {
 		$('.car-list>ul').css('padding','0 30%');
 	}
+	*/
 	$('.car').each(function(){
 		$(this).addClass($(this).text());
 	});
