@@ -8,12 +8,12 @@ h1>a{display: block;text-indent: -999999px;background: url(../images/main/common
 #nav{width: 100%;position: absolute;z-index: 1;}
 #nav ul{float: right;margin-right: 90px;width: 400px;}
 #nav ul:after{content: '';display: block;clear: both;}
-#nav ul li{float: left;color: #fff;width: 20%;transition: .4s;font-size: 1.3em;text-shadow: 1px 1px 1px #292929;background: url(../images/main/common/text-bg.png) 	-100px center no-repeat;}
+#nav ul li{float: left;color: #fff;width: 20%;transition: .4s;font-size: 1.3em;text-shadow: 1px 1px 1px #292929;background: url(../images/main/common/text-bg.png) 	-100px center no-repeat;height: 100px;padding-top: 24px;}
 #nav ul li.active{font-weight: bold;color: #fff;background: url(../images/main/common/text-bg.png) center no-repeat;}
-#nav ul li a{display: block;width: 100%;text-align: center;line-height: 73px;}
+#nav ul li a{display: block;width: 100%;text-align: center;line-height: 50px;}
 
-.sidemenu{display: block;text-indent: -99999px;background: url(../images/main/common/menu.png) 0 0 no-repeat;width: 27px;height: 27px;position: absolute;top: 25px; right: 40px;background-size: 100%;z-index: 4;}
-.sidemenu.on{display: block;text-indent: -99999px;background: url(../images/main/common/menu-close.png) 0 0 no-repeat;width: 27px;height: 27px;position: absolute;top: 25px; right: 40px;background-size: 100%;z-index: 4;}
+.sidemenu{display: block;text-indent: -99999px;background: url(../images/main/common/menu.png) 0 0 no-repeat;width: 27px;height: 27px;position: absolute;top: 36px; right: 40px;background-size: 100%;z-index: 4;}
+.sidemenu.on{display: block;text-indent: -99999px;background: url(../images/main/common/menu-close.png) 0 0 no-repeat;width: 27px;height: 27px;position: absolute;top: 36px; right: 40px;background-size: 100%;z-index: 4;}
 #side-nav{display: none;position: absolute;top: 0;right: 0;padding-top: 25px;z-index: 3;color: #fff;width: 430px;height: 100%;	background: #000;}
 #side-nav .side-nav-inner-wrap{position: absolute;top: 80px;line-height: 45px;width: 100%;}
 #side-nav h2{padding-left: 40px;cursor: pointer;position: relative;}
@@ -23,6 +23,7 @@ h1>a{display: block;text-indent: -999999px;background: url(../images/main/common
 #side-nav ul li:hover{background-color: #fff;color: #000;font-weight: bold;	}
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 	#side-nav{width: 100%;}
+	#nav{display: none;}
 }

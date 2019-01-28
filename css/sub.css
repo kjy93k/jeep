@@ -172,6 +172,15 @@ li.car.cherokee,li.car.latitude,li.car.overland{float: none !important; margin: 
 @media (max-width: 850px) {
 	.car-shape{background-size: 850px;}
 }
+@media (max-width: 750px) {
+	.car-shape{background-size: 850px;}
+}
 @media (max-width:550px ) {
 	.car-shape{background-size: 550px;height: 250px;}
+	.car-list ul{width: 300px;}
+	.car-list ul li.altitude:before{background-size: 90%;right: -50px;}
+.car-list ul li.limited:before{background-size: 90%;right: -50px;}
+.car-list ul li.trailhawk:before{background-size: 90%;;right:-50px;}
+.car-select{width: 70%;}
+.car-select >ul>li ul li{margin-right: 0;}
 }
