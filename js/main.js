@@ -36,23 +36,41 @@ $(document).ready(function(){
 		},5000)
 	}
 
-	$(window).resize({
+	var $bW = $('.interval li').width();
+	var $bH = $('.interval li').height();
+	var $vSrc ='images/main/visual/jeep-visual-';
+	var $mSrc ='images/main/visual/jeep-main-';
+
+	if ($bW/$bH<1.22) {
+		$('.interval li').each(function(index){
+			$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover'});
+		});
+				$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
+				$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
+				$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
+	}
+
+	$(window).resize(function(){
 		var $bW = $('.interval li').width();
 		var $bH = $('.interval li').height();
-		var $vSrc ='images/main/visual/jeep-main-';
+		var $vSrc ='images/main/visual/jeep-visual-';
+		var $mSrc ='images/main/visual/jeep-main-';
 
-		if ($bW > $bH) {
-			each(function(index){
-				$('.interval li').css({'background':'url('+$vSrc+index+'.jpg)'});
-			});
-		} else if ($bW==$bH){
-			each(function(index){
-				$('.interval li').css({'background':'url('+$vSrc+index+'-600.jpg)'});
-			});
-		} else {
-			each(function(index){
-				$('.interval li').css({'background':'url('+$vSrc+index+'-400.jpg)'});
-			});
+		 if($bW/$bH>1.22){
+			$('.interval li.interval1').css({'background':'url('+$vSrc+1+'.jpg) right center no-repeat','background-size': 'cover'});
+			$('.interval li.interval2').css({'background':'url('+$vSrc+2+'.jpg) right center no-repeat','background-size': 'cover'});
+			$('.interval li.interval3').css({'background':'url('+$vSrc+3+'.jpg) right center no-repeat','background-size': 'cover'});
+			$('.interval li.interval4').css({'background':'url('+$vSrc+4+'.jpg) center no-repeat','background-size': 'cover'});
+			$('.slide').eq(0).css({'background':'url('+$mSrc+1+'.jpg)  center bottom no-repeat','background-size': 'cover'})
+			$('.slide').eq(1).css({'background':'url('+$mSrc+2+'.jpg) left center no-repeat','background-size': 'cover'})
+			$('.slide').eq(5).css({'background':'url('+$mSrc+6+'.jpg) center no-repeat','background-size': 'cover'})
+		} else{
+				$('.interval li').each(function(index){
+				$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover'});
+			});			
+				$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
+				$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
+				$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
 		}
 	});
 
