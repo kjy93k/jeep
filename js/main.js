@@ -34,7 +34,29 @@ $(document).ready(function(){
 			}
 			$('.interval ul li').eq($current).fadeIn(200).delay(4600).fadeOut(200);
 		},5000)
-	};
+	}
+
+	$(window).resize({
+		var $bW = $('.interval li').width();
+		var $bH = $('.interval li').height();
+		var $vSrc ='images/main/visual/jeep-main-';
+
+		if ($bW > $bH) {
+			each(function(index){
+				$('.interval li').css({'background':'url('+$vSrc+index+'.jpg)'});
+			});
+		} else if ($bW==$bH){
+			each(function(index){
+				$('.interval li').css({'background':'url('+$vSrc+index+'-600.jpg)'});
+			});
+		} else {
+			each(function(index){
+				$('.interval li').css({'background':'url('+$vSrc+index+'-400.jpg)'});
+			});
+		}
+	});
+
+
 	$('#menu li').mouseover(function(){
 		$('#menu li').removeClass('tada animated');
 		$(this).addClass('tada animated');

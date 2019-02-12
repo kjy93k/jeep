@@ -11,7 +11,7 @@ body{background-color: #000;}
 	.interval ul li{width: 100%;height: 100%;position: relative;}
 	.interval ul li.interval1{background: url(../images/main/visual/jeep-visual-1.jpg) center no-repeat;background-size: cover; display: none;}
 	.interval ul li.interval2{background: url(../images/main/visual/jeep-visual-2.jpg) center no-repeat;background-size: cover;display: none;}
-	.interval ul li.interval2 .main-cmt{position: absolute;transform: translate(-50%,-50%);top: 21%;left: 53%;}
+	.interval ul li.interval2 .main-cmt{position: absolute;transform: translate(-50%,-50%);top: 32%;left: 26%;}
 	.interval ul li.interval3{background: url(../images/main/visual/jeep-visual-3.jpg) center no-repeat;background-size: cover;display: none;}
 	.interval ul li.interval4{background: url(../images/main/visual/jeep-visual-4.jpg) center no-repeat;background-size: cover;display: none;}
 #page3{background: url(../images/main/visual/jeep-main-img-2.jpg) center no-repeat;background-size: 100%;position: relative;}
@@ -31,6 +31,7 @@ body{background-color: #000;}
 .fp-controlArrow.fp-prev,.fp-controlArrow.fp-next{border: none;width: 37px !important;height: 64px;}
 .fp-controlArrow.fp-prev{background: url(../images/main/common/prev-next.png) left 0 no-repeat;}
 .fp-controlArrow.fp-next{background: url(../images/main/common/prev-next.png) right 0 no-repeat;}
+
 
 @media (max-width: 1100px) {
 	.bg-dim{background-position: 35% 52%;}
