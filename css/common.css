@@ -2,13 +2,13 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-body{font-size: 14px;font-family: 'Nanum Gothic','나눔고딕', sans-serif;}
+body{font-size: 14px;font-family:  'Roboto','Nanum Gothic','나눔고딕', sans-serif;}
 h1{position: absolute;top: 30px;left: 40px;z-index: 2;}
 h1>a{display: block;text-indent: -999999px;background: url(../images/main/common/jeep-logo.png) 0 0 no-repeat;width: 87px;height: 35px;background-size: 100%;}
 #nav{width: 100%;position: absolute;z-index: 1;}
-#nav ul{float: right;margin-right: 90px;width: 400px;}
+#nav ul{float: right;margin-right: 90px;width: 430px;}
 #nav ul:after{content: '';display: block;clear: both;}
-#nav ul li{float: left;color: #fff;width: 20%;transition: .4s;font-size: 1.3em;text-shadow: 1px 1px 1px #292929;background: url(../images/main/common/text-bg.png) 	-100px center no-repeat;height: 100px;padding-top: 24px;}
+#nav ul li{float: left;color: #fff;width: 20%;transition: .4s;font-size: 1.1em;text-shadow: 1px 1px 1px #292929;background: url(../images/main/common/text-bg.png) 	-100px center no-repeat;height: 100px;padding-top: 24px;}
 #nav ul li.active{font-weight: bold;color: #fff;background: url(../images/main/common/text-bg.png) center no-repeat;}
 #nav ul li a{display: block;width: 100%;text-align: center;line-height: 50px;}
 

@@ -7,22 +7,25 @@ $(document).ready(function(){
 	$('#fullpage').fullpage({
 	anchor:["1st","2st","3st","4st","5st"],
 	menu:"#menu",
-	afterLoad:function(anchorsLink,index){
-		var myVideo = document.querySelector('.main-video');
-		if (index==1) {
-			if(myVideo.paused){myVideo.play();}
-		}	
-		if (index!=1){
-			$('.bg-dim').stop(true).fadeOut();			
-		}
-	}
+	// afterLoad:function(anchorsLink,index){
+	// 	var myVideo = document.querySelector('.main-video');
+	// 	if (index==1) {
+	// 		if(myVideo.paused){myVideo.play();}
+	// 	}	
+	// 	if (index!=1){
+	// 		$('.bg-dim').stop(true).fadeOut();			
+	// 	}
+	// }
 	});
-	
+	$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:false});
+	$('.interval .main-cmt').eq(0).delay(1000).addClass('animated fadeInDown');	
+	$('.interval .main-cmt').eq(1).delay(1000).addClass('animated fadeInLeft');	
+	$('.interval .main-cmt').eq(2).delay(1000).addClass('animated fadeInUp');	
+	$('.interval .main-cmt').eq(3).delay(1000).addClass('animated fadeInDown');	
 	$('.bg-dim').fadeIn(1000).delay(5000).fadeOut(1000);
 	$('.bg-dim').click(function(){
 		$('.bg-dim').stop(true).fadeOut();
 	});
-	
 	$('.interval ul li').eq(0).fadeIn(0).delay(4800).fadeOut(200);
 	timer();
 	function timer(){
@@ -33,6 +36,7 @@ $(document).ready(function(){
 				$current=0;
 			}
 			$('.interval ul li').eq($current).fadeIn(200).delay(4600).fadeOut(200);
+
 		},5000)
 	}
 
@@ -40,14 +44,20 @@ $(document).ready(function(){
 	var $bH = $('.interval li').height();
 	var $vSrc ='images/main/visual/jeep-visual-';
 	var $mSrc ='images/main/visual/jeep-main-';
-
+	var $mISrc ='images/main/visual/jeep-main-img-';
 	if ($bW/$bH<1.22) {
 		$('.interval li').each(function(index){
-			$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover'});
+			$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover','padding-top':'200px'});
 		});
-				$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
-				$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
-				$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
+		$('.interval .main-cmt').css({'position':'static','text-align':'center'});
+		$('#page3').css({'background':'url('+$mISrc+2+'-2.jpg) center bottom no-repeat','background-size': 'cover'});
+		$('#page3 .main-cmt').css({'position':'static','padding-top':'200px'});
+		$('#page3 .main-cmt img').css('width','240px');
+		$('#page4').css({'background':'url('+$mISrc+3+'-2.jpg) center bottom no-repeat','background-size': 'cover'});
+		$('#page4 .main-cmt').css({'position':'static','width':'225px','font-size':'20px','margin':'0 auto','padding-top':'200px'});
+		$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
+		$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
+		$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
 	}
 
 	$(window).resize(function(){
@@ -55,22 +65,36 @@ $(document).ready(function(){
 		var $bH = $('.interval li').height();
 		var $vSrc ='images/main/visual/jeep-visual-';
 		var $mSrc ='images/main/visual/jeep-main-';
+		var $mISrc ='images/main/visual/jeep-main-img-';
 
 		 if($bW/$bH>1.22){
 			$('.interval li.interval1').css({'background':'url('+$vSrc+1+'.jpg) right center no-repeat','background-size': 'cover'});
 			$('.interval li.interval2').css({'background':'url('+$vSrc+2+'.jpg) right center no-repeat','background-size': 'cover'});
 			$('.interval li.interval3').css({'background':'url('+$vSrc+3+'.jpg) right center no-repeat','background-size': 'cover'});
 			$('.interval li.interval4').css({'background':'url('+$vSrc+4+'.jpg) center no-repeat','background-size': 'cover'});
+			$('.interval .main-cmt').css({'position':'absolute'});
+			$('.interval .main-cmt').eq(3).css({'position':'static'});
+			$('#page3').css({'background':'url('+$mISrc+2+'.jpg) center no-repeat','background-size': 'cover'});
+			$('#page3 .main-cmt').css({'position':'absolute','padding-top':'0'});
+			$('#page3 .main-cmt img').css('width','340px');
+			$('#page4').css({'background':'url('+$mISrc+3+'.jpg) center no-repeat','background-size': 'cover'});
+			$('#page4 .main-cmt').css({'position':'absolute','width':'375px','font-size':'35px','padding-top':'0'});
 			$('.slide').eq(0).css({'background':'url('+$mSrc+1+'.jpg)  center bottom no-repeat','background-size': 'cover'})
 			$('.slide').eq(1).css({'background':'url('+$mSrc+2+'.jpg) left center no-repeat','background-size': 'cover'})
 			$('.slide').eq(5).css({'background':'url('+$mSrc+6+'.jpg) center no-repeat','background-size': 'cover'})
 		} else{
-				$('.interval li').each(function(index){
-				$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover'});
+			$('.interval li').each(function(index){
+				$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover','padding-top':'200px'});
 			});			
-				$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
-				$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
-				$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
+			$('.interval .main-cmt').css({'position':'static','text-align':'center'});
+			$('#page3').css({'background':'url('+$mISrc+2+'-2.jpg) center bottom no-repeat','background-size': 'cover'});
+			$('#page3 .main-cmt').css({'position':'static','padding-top':'200px'});
+			$('#page3 .main-cmt img').css('width','240px');
+			$('#page4').css({'background':'url('+$mISrc+3+'-2.jpg) center bottom no-repeat','background-size': 'cover'});
+			$('#page4 .main-cmt').css({'position':'static','width':'225px','font-size':'20px','margin':'0 auto','padding-top':'200px'});
+			$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
+			$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
+			$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
 		}
 	});
 
