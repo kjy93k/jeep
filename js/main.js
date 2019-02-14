@@ -7,15 +7,17 @@ $(document).ready(function(){
 	$('#fullpage').fullpage({
 	anchor:["1st","2st","3st","4st","5st"],
 	menu:"#menu",
-	// afterLoad:function(anchorsLink,index){
-	// 	var myVideo = document.querySelector('.main-video');
-	// 	if (index==1) {
-	// 		if(myVideo.paused){myVideo.play();}
-	// 	}	
-	// 	if (index!=1){
-	// 		$('.bg-dim').stop(true).fadeOut();			
-	// 	}
-	// }
+	afterLoad:function(anchorsLink,index){
+		if (index==1) {
+			$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:true,autoplay:true});
+		} else{
+		$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:false,muted:true,autoplay:true});
+
+		}
+		if (index!=1){
+			$('.bg-dim').stop(true).fadeOut();			
+		}
+	}
 	});
 	$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:false});
 	$('.interval .main-cmt').eq(0).delay(1000).addClass('animated fadeInDown');	
@@ -40,11 +42,21 @@ $(document).ready(function(){
 		},5000)
 	}
 
-	var $bW = $('.interval li').width();
-	var $bH = $('.interval li').height();
+	var $bW = $('body').width();
+	var $bH = $('body').height();
 	var $vSrc ='images/main/visual/jeep-visual-';
 	var $mSrc ='images/main/visual/jeep-main-';
 	var $mISrc ='images/main/visual/jeep-main-img-';
+	
+	// if ($bW/bH<1.74) {
+	// 	$('.video-wrap').hide();
+	// 	$('.no-video').show();
+	// } else{
+	// 	$('.video-wrap').show();
+	// 	$('.no-video').hide();
+	// }
+
+
 	if ($bW/$bH<1.22) {
 		$('.interval li').each(function(index){
 			$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover','padding-top':'200px'});
@@ -61,11 +73,19 @@ $(document).ready(function(){
 	}
 
 	$(window).resize(function(){
-		var $bW = $('.interval li').width();
-		var $bH = $('.interval li').height();
+		var $bW = $('body').width();
+		var $bH = $('body').height();
 		var $vSrc ='images/main/visual/jeep-visual-';
 		var $mSrc ='images/main/visual/jeep-main-';
 		var $mISrc ='images/main/visual/jeep-main-img-';
+
+		// if ($bW/bH<1.74) {
+		// 	$('.video-wrap').hide();
+		// 	$('.no-video').show();
+		// } else{
+		// 	$('.video-wrap').show();
+		// 	$('.no-video').hide();
+		// }
 
 		 if($bW/$bH>1.22){
 			$('.interval li.interval1').css({'background':'url('+$vSrc+1+'.jpg) right center no-repeat','background-size': 'cover'});

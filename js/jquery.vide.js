@@ -393,7 +393,7 @@
     var videoWidth = video.videoWidth;
 
     // Get a wrapper size
-    var wrapperHeight = $wrapper.height();
+    var wrapperHeight = $wrapper.height()*1.5;
     var wrapperWidth = $wrapper.width();
 
     if (wrapperWidth / videoWidth > wrapperHeight / videoHeight) {
