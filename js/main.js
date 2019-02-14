@@ -48,13 +48,13 @@ $(document).ready(function(){
 	var $mSrc ='images/main/visual/jeep-main-';
 	var $mISrc ='images/main/visual/jeep-main-img-';
 	
-	// if ($bW/bH<1.74) {
-	// 	$('.video-wrap').hide();
-	// 	$('.no-video').show();
-	// } else{
-	// 	$('.video-wrap').show();
-	// 	$('.no-video').hide();
-	// }
+	if ($bW/$bH<1.74) {
+		$('.video-wrap').hide();
+		$('.no-video').show();
+	} else{
+		$('.video-wrap').show();
+		$('.no-video').hide();
+	}
 
 
 	if ($bW/$bH<1.22) {
@@ -79,13 +79,13 @@ $(document).ready(function(){
 		var $mSrc ='images/main/visual/jeep-main-';
 		var $mISrc ='images/main/visual/jeep-main-img-';
 
-		// if ($bW/bH<1.74) {
-		// 	$('.video-wrap').hide();
-		// 	$('.no-video').show();
-		// } else{
-		// 	$('.video-wrap').show();
-		// 	$('.no-video').hide();
-		// }
+		if ($bW/$bH<1.74) {
+			$('.video-wrap').hide();
+			$('.no-video').show();
+		} else{
+			$('.video-wrap').show();
+			$('.no-video').hide();
+		}
 
 		 if($bW/$bH>1.22){
 			$('.interval li.interval1').css({'background':'url('+$vSrc+1+'.jpg) right center no-repeat','background-size': 'cover'});
