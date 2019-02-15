@@ -11,7 +11,7 @@ $(document).ready(function(){
 		if (index==1) {
 			$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:true,autoplay:true});
 		} else{
-		$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:false,muted:true,autoplay:true});
+		$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:false,muted:false});
 
 		}
 		if (index!=1){
@@ -19,7 +19,7 @@ $(document).ready(function(){
 		}
 	}
 	});
-	$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:false});
+	$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:true,autoplay:true});
 	$('.interval .main-cmt').eq(0).delay(1000).addClass('animated fadeInDown');	
 	$('.interval .main-cmt').eq(1).delay(1000).addClass('animated fadeInLeft');	
 	$('.interval .main-cmt').eq(2).delay(1000).addClass('animated fadeInUp');	
