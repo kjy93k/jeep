@@ -67,7 +67,7 @@ $(document).ready(function(){
 		console.log($carIndex);
 		$(this).addClass($('.car').eq($carIndex).text());
 	});
-	$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+	$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 	$('.car-select').hide();
 	$('.car-select-1').show();
 	$('.car-list li').click(function(){
@@ -80,7 +80,7 @@ $(document).ready(function(){
 		$cti ='01';
 		$wti ='01';
 		$tti ='01';
-		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 	});
 	$('.color li:first-child').addClass('select');
 	$('.wheel li:first-child').addClass('select');
@@ -93,7 +93,7 @@ $(document).ready(function(){
 		} else {
 			$cti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 		$('.color li').removeClass('select');
 		$(this).addClass('select');
 	});
@@ -106,7 +106,7 @@ $(document).ready(function(){
 		} else {
 			$wti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 		$('.wheel li').removeClass('select');
 		$(this).addClass('select');		
 	});
@@ -117,7 +117,7 @@ $(document).ready(function(){
 		} else {
 			$tti=eval($ti+1);
 		}
-		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 		$('.top li').removeClass('select');
 		$(this).addClass('select');		
 	});
@@ -133,7 +133,7 @@ $(document).ready(function(){
 			$i=8;
 		}
 		$rti = 'r0'+$i;
-		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 	});
 	$('.right').click(function(){
 	$i++;
@@ -141,7 +141,7 @@ $(document).ready(function(){
 			$i=1;
 		}
 		$rti = 'r0'+$i;
-		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg'});
+		$('.car-shape').css({'background-image':'url(images/sub/'+$folderN+'/'+$cn+'c'+$cti+'w'+$wti+'t'+$tti+$rti+'.jpg','background-repeat':'no-repeat'});
 
 	});
 

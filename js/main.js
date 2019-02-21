@@ -11,7 +11,7 @@ $(document).ready(function(){
 		if (index==1) {
 			$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:true,autoplay:true});
 		} else{
-		$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:false,muted:false});
+		$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:false,muted:false,autoplay:false});
 
 		}
 		if (index!=1){
@@ -42,42 +42,12 @@ $(document).ready(function(){
 		},5000)
 	}
 
-	// var $bW = $('body').width();
-	// var $bH = $('body').height();
-	// var $vSrc ='images/main/visual/jeep-visual-';
-	// var $mSrc ='images/main/visual/jeep-main-';
-	// var $mISrc ='images/main/visual/jeep-main-img-';
-	
-	// if ($bW/$bH<1.74) {
-	// 	$('.video-wrap').hide();
-	// 	$('.no-video').show();
-	// } else{
-	// 	$('.video-wrap').show();
-	// 	$('.no-video').hide();
-	// }
 
-
-	// if ($bW/$bH<1.22) {
-	// 	$('.interval li').each(function(index){
-	// 		$(this).css({'background':'url('+$vSrc+eval(index+1)+'-2.jpg)  center bottom no-repeat','background-size': 'cover','padding-top':'200px'});
-	// 	});
-	// 	$('.interval .main-cmt').css({'position':'static','text-align':'center'});
-	// 	$('#page3').css({'background':'url('+$mISrc+2+'-2.jpg) center bottom no-repeat','background-size': 'cover'});
-	// 	$('#page3 .main-cmt').css({'position':'static','padding-top':'200px'});
-	// 	$('#page3 .main-cmt img').css('width','240px');
-	// 	$('#page4').css({'background':'url('+$mISrc+3+'-2.jpg) center bottom no-repeat','background-size': 'cover'});
-	// 	$('#page4 .main-cmt').css({'position':'static','width':'225px','font-size':'20px','margin':'0 auto','padding-top':'200px'});
-	// 	$('.slide').eq(0).css({'background':'url('+$mSrc+1+'-2.jpg)  center top no-repeat','background-size': 'cover'})
-	// 	$('.slide').eq(1).css({'background':'url('+$mSrc+2+'-2.jpg) center no-repeat','background-size': 'cover'})
-	// 	$('.slide').eq(5).css({'background':'url('+$mSrc+6+'-2.jpg) center no-repeat','background-size': 'cover'})
-	// }
-setTimeout(function(){resZ()},1);
+	setTimeout(function(){resZ()},1);
 
 	$(window).resize(function(){
-		// 
 		resZ();
 	});
-
 
 	$('#menu li').mouseover(function(){
 		$('#menu li').removeClass('tada animated');
@@ -132,9 +102,11 @@ function resZ(){
 
 		if ($bW/$bH<1.74) {
 			$('.video-wrap').hide();
+			$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:false,muted:false,autoplay:false});
 			$('.no-video').show();
 		} else{
 			$('.video-wrap').show();
+			$(".video-wrap").vide("images/main/visual/jeep.mp4",{loop:true,muted:true,autoplay:true});
 			$('.no-video').hide();
 		}
 
